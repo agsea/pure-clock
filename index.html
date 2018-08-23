@@ -3,11 +3,36 @@
 <head>
     <meta charset="UTF-8">
     <title>pure-clock</title>
-    <link rel="stylesheet" href="pure-clock.css">
+    <link rel="stylesheet" href="src/pure-clock.css">
+    <style>
+        .decoration-lufei {
+            position: absolute;
+            width: 100px;
+            height: 200px;
+            right: 0px;
+            bottom: 0px;
+            background: url('src/doll-lufei.gif') no-repeat;
+            background-size: 100%;
+            animation: transtalteLoop 5s ease infinite;
+        }
+
+        @keyframes transtalteLoop {
+            0% {
+                right: 0px;
+            }
+            50% {
+                right: 50px;
+            }
+            100% {
+                right: 0px;
+            }
+        }
+    </style>
 </head>
 <body>
-    <div class="pure-clock">
-        
-    </div>
+    <div class="pure-clock-container" id="myPureClockCon"
+        style="transform: scale(0.6);"></div>
+    <div class="decoration-lufei"></div>
+    <script src="src/main.js"></script>
 </body>
 </html>
